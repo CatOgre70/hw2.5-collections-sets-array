@@ -72,9 +72,7 @@ public class EmployeeServiceImpl implements EmployeeService{
 
     public Employee[] allEmployeeList(){
         Employee[] array = new Employee[counter];
-        for (int i = 0; i < counter; i++) {
-            array[i] = employees[i];
-        }
+        System.arraycopy(employees, 0, array, 0, counter);
         return array;
     }
 
